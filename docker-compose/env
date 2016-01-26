@@ -1,0 +1,5 @@
+########## environments ##########
+
+# environment
+ZHIHUIYA_RSYSLOG=192.168.3.71:11514
+ZHIHUIYA_ZABBIX=192.168.3.66

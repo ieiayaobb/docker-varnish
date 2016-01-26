@@ -1,0 +1,9 @@
+varnish:
+  image: local-dtr.patsnap.com/patsnap/varnish:Dev.1.0.0-SNAPSHOT
+  ports:
+   - "8080:8080"
+
+  volumes:
+   - /tmp/logs:/var/log/message
+  env_file: env
+  restart: always
