@@ -1,7 +1,8 @@
 FROM local-dtr.patsnap.com/patsnap/base:latest
 MAINTAINER shenyineng <shenyineng@patsnap.com>
 
-RUN yum update -y && \
+RUN yum swap -y -- remove systemd-container\* -- install systemd systemd-libs && \
+  yum update -y && \
   yum install -y epel-release && \
   yum install -y varnish && \
   yum install -y libmhash-devel && \
